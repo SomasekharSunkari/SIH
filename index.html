@@ -33,6 +33,7 @@
         background-image: url("Assets/Images/Bg-4.jpg");
         background-size: cover;
         background-position: center;
+        overflow: hidden;
         width: 100%;
         background-repeat: no-repeat;
       }
@@ -92,13 +93,14 @@
         text-align: center;
       }
       main {
-        width: 50%;
+        width: 60%;
         margin-left: 10rem;
         margin-top: 5rem;
       }
       main p {
         color: white;
-        font-size: 3rem;
+        font-size: 2rem;
+        margin-top: 1.5rem;
       }
       main .button {
         margin-top: 3rem;
@@ -106,6 +108,15 @@
       main .button button {
         font-size: 20px;
         margin-left: 20px;
+      }
+      main h1 {
+        font-size: 5rem;
+        color: white;
+        font-weight: bold;
+      }
+      main h1 span {
+        color: skyblue;
+        text-shadow: 2px 2px 20px skyblue;
       }
 
       @media screen and (max-width: 833px) {
@@ -156,6 +167,9 @@
         main .button button {
           margin-top: 30px;
         }
+        main h1 {
+          text-align: center;
+        }
       }
       @media screen and (max-width: 556px) {
         main .button button {
@@ -172,23 +186,24 @@
       }
 
       .Rest {
-        min-height: 100vh;
+        height: auto;
         background-image: linear-gradient(90deg, rgb(20, 204, 221), lightpink);
         width: 100%;
       }
       .Benifits {
         display: flex;
-        flex-wrap: wrap;
+        height: auto;
       }
       .Benifits .card {
         flex: 1;
         text-align: center;
         background-color: transparent;
         border: 0;
+        height: auto;
         padding: 20px;
       }
       .Benifits .card img {
-        width: 350px;
+        max-width: 350px;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -200,6 +215,99 @@
       }
       .Benifits .card span {
         color: yellow;
+      }
+      @media screen and (max-width: 1113px) {
+        .Benifits {
+          flex-direction: column;
+        }
+      }
+      .footer {
+        height: auto;
+        width: 100%;
+        text-align: center;
+        background-image: linear-gradient(90deg, rgb(20, 204, 221), lightpink);
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .footer .para {
+        display: block;
+        max-width: 1000px;
+        margin-left: auto;
+        font-size: 1.3rem;
+        margin-right: auto;
+        text-align: center;
+      }
+      .footer > h1 {
+        font-size: 4rem;
+        font-weight: bold;
+      }
+
+      .footer .about-us .first {
+        text-align: left;
+        flex: 1;
+        width: 20%;
+        vertical-align: baseline;
+      }
+      .footer .about-us .first a {
+        display: block;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.3rem;
+        color: gray;
+        padding-top: 3px;
+      }
+      .footer .about-us .first h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        padding-left: 1.7rem;
+      }
+      .about {
+        text-align: left;
+        flex: 1;
+      }
+      .about h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        padding-left: 2rem;
+      }
+      .about-us {
+        display: flex;
+        margin-top: 10rem;
+        margin-left: 4rem;
+      }
+      .about ul a {
+        display: block;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: bold;
+        padding-top: 0px;
+        color: gray;
+      }
+
+      .descrpition {
+        margin-top: 4rem;
+      }
+      .descrpition h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .descrpition p {
+        max-width: 1000px;
+        font-size: 1.3rem;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .contact-us {
+        margin-top: 3rem;
+      }
+      .contact-us h3 {
+        font-size: 2rem;
+        color: rgb(114, 110, 110);
+      }
+      .icons i {
+        margin: 2rem;
+        font-size: 3rem;
       }
     </style>
   </head>
@@ -231,10 +339,15 @@
         </nav>
       </header>
       <main>
-        <h1>Build trust in your Organisation</h1>
+        <h1>
+          <span>Build</span> <br />
+          trust in your Organisation
+        </h1>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
-          fugiat totam
+          fugiat totam Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          At, eum? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Doloribus, placeat.
         </p>
         <div class="button row my-5">
           <button
@@ -275,6 +388,92 @@
           </p>
         </div>
       </section>
+    </section>
+
+    <section class="footer">
+      <h1>The Achivers</h1>
+      <p class="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+        aspernatur nemo magni soluta fuga est tempora pariatur fugiat laudantium
+        nulla dignissimos ducimus praesentium beatae, aut commodi? Quae ut
+        deleniti nesciunt consectetur obcaecati quo quos voluptas, sint facilis
+        esse facere! Numquam illo molestias recusandae voluptatibus maxime
+        possimus animi quas soluta dolores. Lorem ipsum dolor sit, amet
+        consectetur adipisicing elit. Mollitia, ducimus nisi quo facilis minus
+        enim quisquam qui, cum tempora perspiciatis eos sit cumque ad temporibus
+        autem praesentium quaerat vel ab!
+      </p>
+      <div class="descrpition">
+        <h1>Blockchain E-Certificate Generation</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et esse
+          dolor rem minima inventore quasi quaerat aspernatur magni praesentium
+          nobis, ullam labore necessitatibus blanditiis unde provident sit
+          incidunt possimus nemo fugit tenetur maiores eligendi officiis quidem
+          quam. Libero, eos aperiam! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quia quis quidem assumenda cumque cum, deleniti
+          obcaecati voluptas esse totam Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Vero pariatur eaque ducimus rem, maiores eum maxime
+          saepe adipisci odit, perferendis dolorem temporibus aut dolor
+          reiciendis voluptate obcaecati rerum cupiditate nobis.
+        </p>
+      </div>
+      <div class="about-us">
+        <div class="first">
+          <h1>Serivces</h1>
+          <ul>
+            <a href="#">Ethereum</a>
+            <a href="#">Blockchain</a>
+            <a href="#">Smart Contracts</a>
+          </ul>
+        </div>
+        <div class="about">
+          <h1>About us</h1>
+          <ul>
+            <a href="#">Chaitanya</a>
+            <a href="#">Murali</a>
+            <a href="#">Sekhar</a>
+            <a href="#">Nani</a>
+            <a href="#">Hemanth Sai</a>
+            <a href="#">Janet</a>
+          </ul>
+        </div>
+        <div class="about">
+          <h1>About us</h1>
+          <ul>
+            <a href="#">Chaitanya</a>
+            <a href="#">Murali</a>
+            <a href="#">Sekhar</a>
+            <a href="#">Nani</a>
+            <a href="#">Hemanth Sai</a>
+            <a href="#">Janet</a>
+          </ul>
+        </div>
+        <div class="about">
+          <h1>About us</h1>
+          <ul>
+            <a href="#">Chaitanya</a>
+            <a href="#">Murali</a>
+            <a href="#">Sekhar</a>
+            <a href="#">Nani</a>
+            <a href="#">Hemanth Sai</a>
+            <a href="#">Janet</a>
+          </ul>
+        </div>
+      </div>
+      <div class="contact-us">
+        <h3>Contact Us</h3>
+        <div class="icons">
+          <i class="fa-brands fa-facebook" style="color: blue"></i>
+          <i class="fa-brands fa-twitter" style="color: rgb(10, 177, 243)"></i>
+          <i
+            class="fa-brands fa-instagram"
+            style="color: rgb(219, 10, 170)"
+          ></i>
+          <i class="fa-brands fa-linkedin" style="color: blue"></i>
+          <i class="fa-regular fa-envelope" style="color: red"></i>
+        </div>
+      </div>
     </section>
     <script
       src="https://kit.fontawesome.com/73d1e72ba5.js"
