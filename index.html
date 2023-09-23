@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=\, initial-scale=1.0" />
     <title>Achivers Blockchain</title>
+    <link rel="stylesheet" href="Styles/index.css" />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -11,9 +12,210 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/Styles/index.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap");
+      * {
+        border: 0;
+        padding: 0;
+        margin: 0;
+
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      html {
+        font-size: 63.5%;
+      }
+      .starting {
+        min-height: 100vh;
+        background-image: url("Assets/Images/Bg-4.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        background-repeat: no-repeat;
+      }
+
+      .logo p {
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      header {
+        display: flex;
+        background-color: transparent;
+        margin: 0px 20px;
+        line-height: 3rem;
+      }
+      header .nav-bar {
+        position: relative;
+      }
+
+      header .nav-bar .navigation-links li {
+        display: inline-block;
+        padding: 10px 30px;
+        list-style-type: none;
+      }
+      header .nav-bar .navigation-links li a {
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+        position: relative;
+      }
+      header .nav-bar .navigation-links li a::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background: white;
+        border-radius: 2px;
+        bottom: -2px;
+        transition: 0.5s;
+      }
+      header .nav-bar .navigation-links li a:hover::before {
+        width: 100%;
+      }
+
+      .menu-bar {
+        display: none;
+      }
+
+      header .nav-bar {
+        flex: 1;
+        text-align: center;
+      }
+      .toggl-manubar {
+        transform: scale(1) !important;
+        transition: 0.1s;
+        transform-origin: right;
+        text-align: center;
+      }
+      main {
+        width: 50%;
+        margin-left: 10rem;
+        margin-top: 5rem;
+      }
+      main p {
+        color: white;
+        font-size: 3rem;
+      }
+      main .button {
+        margin-top: 3rem;
+      }
+      main .button button {
+        font-size: 20px;
+        margin-left: 20px;
+      }
+
+      @media screen and (max-width: 833px) {
+        header .nav-bar .navigation-links li {
+          display: block;
+        }
+        header .nav-bar .navigation-links {
+          position: absolute;
+          width: 70%;
+          background-color: transparent;
+          z-index: 1000;
+          height: auto;
+          right: -10px;
+          transform: scale(0);
+          text-align: center;
+          backdrop-filter: blur(20px);
+          background-color: rgba(0, 0, 0, 0.2);
+          box-shadow: inset 8px 8px 5px rgba(0, 0, 0, 0.2),
+            inset -8px -8px 5px rgba(0, 0, 0, 0.2);
+          top: 45px;
+        }
+        .menu-bar {
+          position: absolute;
+          right: 0;
+          display: block;
+          font-size: 2.5rem;
+          color: white;
+          padding-top: 10px;
+        }
+        main {
+          width: 90%;
+          margin-left: 10px;
+          margin-top: 8rem;
+
+          margin-right: auto;
+        }
+        .Benifits {
+          flex-direction: column;
+        }
+        main p {
+          font-size: 2rem;
+          text-align: center;
+        }
+        main button {
+          margin-right: auto;
+          margin-left: auto;
+        }
+        main .button button {
+          margin-top: 30px;
+        }
+      }
+      @media screen and (max-width: 556px) {
+        main .button button {
+          margin-top: 30px;
+          margin-left: 10px;
+        }
+        main p {
+          height: auto;
+        }
+
+        main {
+          padding: 10px 20px;
+        }
+      }
+
+      .Rest {
+        min-height: 100vh;
+        background-image: linear-gradient(90deg, rgb(20, 204, 221), lightpink);
+        width: 100%;
+      }
+      .Benifits {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .Benifits .card {
+        flex: 1;
+        text-align: center;
+        background-color: transparent;
+        border: 0;
+        padding: 20px;
+      }
+      .Benifits .card img {
+        width: 350px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+        object-fit: contain;
+      }
+      .Benifits .card p {
+        font-size: 1.4rem;
+      }
+      .Benifits .card span {
+        color: yellow;
+      }
+    </style>
   </head>
   <body>
+    <div class="loader-wraper">
+      <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
     <section class="starting">
       <header>
         <div class="logo py-3"><p>Logo</p></div>
@@ -78,7 +280,9 @@
       src="https://kit.fontawesome.com/73d1e72ba5.js"
       crossorigin="anonymous"
     ></script>
-    <script>
+    <script defer>
+      $(".loader-wraper").fadeOut("slow");
+
       let btnToggle = document.querySelector(".menu-bar");
       let nav_bar = document.querySelector("header .nav-bar .navigation-links");
 
