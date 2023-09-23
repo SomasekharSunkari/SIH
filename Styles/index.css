@@ -15,9 +15,10 @@ html {
 }
 .starting {
   min-height: 100vh;
-  background-image: url("Assets/Images/Bg-4.jpg");
+  background-image: url("../Assets/Images/Bg-4.jpg");
   background-size: cover;
   background-position: center;
+  overflow: hidden;
   width: 100%;
   background-repeat: no-repeat;
 }
@@ -77,13 +78,14 @@ header .nav-bar {
   text-align: center;
 }
 main {
-  width: 50%;
+  width: 60%;
   margin-left: 10rem;
   margin-top: 5rem;
 }
 main p {
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
+  margin-top: 1.5rem;
 }
 main .button {
   margin-top: 3rem;
@@ -91,6 +93,15 @@ main .button {
 main .button button {
   font-size: 20px;
   margin-left: 20px;
+}
+main h1 {
+  font-size: 5rem;
+  color: white;
+  font-weight: bold;
+}
+main h1 span {
+  color: skyblue;
+  text-shadow: 2px 2px 20px skyblue;
 }
 
 @media screen and (max-width: 833px) {
@@ -127,6 +138,9 @@ main .button button {
 
     margin-right: auto;
   }
+  .Benifits {
+    flex-direction: column;
+  }
   main p {
     font-size: 2rem;
     text-align: center;
@@ -137,6 +151,9 @@ main .button button {
   }
   main .button button {
     margin-top: 30px;
+  }
+  main h1 {
+    text-align: center;
   }
 }
 @media screen and (max-width: 556px) {
@@ -152,10 +169,128 @@ main .button button {
     padding: 10px 20px;
   }
 }
-@media screen and (max-width: 387px) {
-}
+
 .Rest {
-  min-height: 100vh;
+  height: auto;
   background-image: linear-gradient(90deg, rgb(20, 204, 221), lightpink);
   width: 100%;
+}
+.Benifits {
+  display: flex;
+  height: auto;
+}
+.Benifits .card {
+  flex: 1;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  height: auto;
+  padding: 20px;
+}
+.Benifits .card img {
+  max-width: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  object-fit: contain;
+}
+.Benifits .card p {
+  font-size: 1.4rem;
+}
+.Benifits .card span {
+  color: yellow;
+}
+@media screen and (max-width: 1113px) {
+  .Benifits {
+    flex-direction: column;
+  }
+}
+.footer {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(90deg, rgb(20, 204, 221), lightpink);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.footer .para {
+  display: block;
+  max-width: 1000px;
+  margin-left: auto;
+  font-size: 1.3rem;
+  margin-right: auto;
+  text-align: center;
+}
+.footer > h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.footer .about-us .first {
+  text-align: left;
+  flex: 1;
+  width: 20%;
+  vertical-align: baseline;
+}
+.footer .about-us .first a {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: gray;
+  padding-top: 3px;
+}
+.footer .about-us .first h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 1.7rem;
+}
+.about {
+  text-align: left;
+  flex: 1;
+}
+.about h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 2rem;
+}
+.about-us {
+  display: flex;
+  margin-top: 10rem;
+  margin-left: 4rem;
+}
+.about ul a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-top: 0px;
+  color: gray;
+}
+
+.descrpition {
+  margin-top: 4rem;
+}
+.descrpition h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.descrpition p {
+  max-width: 1000px;
+  font-size: 1.3rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.contact-us {
+  margin-top: 3rem;
+}
+.contact-us h3 {
+  font-size: 2rem;
+  color: rgb(114, 110, 110);
+}
+.icons i {
+  margin: 2rem;
+  font-size: 3rem;
 }
