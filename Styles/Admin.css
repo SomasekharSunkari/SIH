@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap");
+
+.menu-bar {
+  display: none !important;
+  color: aliceblue;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+header {
+  background-color: rgb(42, 39, 39) !important;
+  padding: 0 30px !important;
+  margin: 0 !important;
+  width: 100%;
+}
+.toggl-manubar {
+  transform: scale(1) !important;
+  transition: 0.1s;
+  transform-origin: right;
+  text-align: center;
+}
+body {
+  height: auto;
+  background-image: linear-gradient(90deg, rgb(20, 204, 221), lightpink);
+}
+@media screen and (max-width: 833px) {
+  .menu-bar {
+    display: block !important;
+  }
+}
+.Profile-card p {
+  color: white;
+  font-size: 1.5rem;
+}
+.Profile-card p span {
+  color: yellow;
+}
+.Profile-card {
+  max-width: 95%;
+
+  padding: 30px;
+  border-radius: 20px;
+  display: block;
+  margin-left: auto;
+  background-color: rgb(28, 26, 26);
+  height: 25vh;
+  margin-right: auto;
+  margin-top: 2px;
+}
+.form {
+  width: 60%;
+  background-color: rgb(28, 26, 26);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  text-align: center;
+  padding: 30px;
+  height: auto;
+  border-radius: 20px;
+}
+.form input {
+  width: 80%;
+  height: 3.5rem;
+  border: 0;
+  outline: 1px rgb(223, 17, 165) solid;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: 0.1s;
+  color: white;
+}
+.btns button {
+  width: 20%;
+  padding: 10px;
+  background-color: rgb(223, 17, 165);
+  color: white;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  margin: 10px;
+  transition: 0.3s;
+}
+.btns button:nth-child(1):hover {
+  background-color: rgb(35, 229, 10);
+}
+.btns button:nth-child(2):hover {
+  background-color: rgb(201, 16, 16);
+}
+.btns button:nth-child(3):hover {
+  background-color: rgb(16, 208, 230);
+}
+.form input:focus {
+  outline: 2px rgb(223, 17, 165) solid;
+}
+.about-us .first ul a {
+  display: block;
+  text-decoration: none;
+  color: gray;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.about-us .first {
+  flex: 1;
+}
+.about-us {
+  margin-left: 10rem;
+}
+.about-us .first ul {
+  text-align: left;
+  margin-left: -20px;
+}
+.contact-us {
+  text-align: center;
+}
+
+.about-us .first h1 {
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 986px) {
+  .btns button {
+    width: 26%;
+  }
+}
+@media screen and (max-width: 745px) {
+  .btns button {
+    width: 100%;
+  }
+  .about-us {
+    margin-left: 1rem;
+  }
+  .about-us .first ul {
+    margin-left: 0;
+  }
+  .btns button {
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .about-us {
+    flex-direction: column;
+  }
+  .about-us .first ul,
+  .about ul,
+  h1 {
+    text-align: center;
+    font-size: 4rem;
+  }
+  .about-us .first,
+  .about {
+    margin-top: 20px;
+  }
+}
