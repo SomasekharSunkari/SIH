@@ -46,8 +46,7 @@ const contractABI = [
                     ];
 
 
-const contractAddress = '0x958F0ADc224FeAa251Bd29D54B8798cE8F950C90'; // Replace with your contract's address
-
+const contractAddress = '0x958F0ADc224FeAa251Bd29D54B8798cE8F950C90'; 
 const contract = new web3.eth.Contract(contractABI, contractAddress);
 
 // Check if the contract.methods object contains the expected method names
