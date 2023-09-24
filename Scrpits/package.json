@@ -13,6 +13,7 @@
     "@helia/unixfs": "^1.4.2",
     "helia": "^2.0.3",
     "ipfs-http-client": "^60.0.1",
-    "moralis": "^2.23.1"
+    "moralis": "^2.23.1",
+    "solc": "^0.8.21"
   }
 }
