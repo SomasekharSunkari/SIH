@@ -1,6 +1,4 @@
  import Web3 from 'web3';
-
-
 const web3 = new Web3('http://127.0.0.1:7545'); // Replace with your Ganache URL
 // const contract1 = require("C:\Users\sunkari somasekhar\Desktop\SIH_Frontend\client\src\contracts\IPFSStorage.json")
 const contractABI = [

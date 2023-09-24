@@ -21,7 +21,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="Upload.html">Upload</a></li>
           <li><a href="Verify.html">Verify</a></li>
-          <li><a href="Delete.html">Delete</a></li>
+          <!-- <li><a href="Delete.html">Delete</a></li> -->
           <li><a href="Admin.html">Admin</a></li>
           <li><a href="#">Team</a></li>
         </ul>
@@ -96,6 +96,16 @@
     ></script>
     <script>
       const element = document.getElementById("fileinput");
+      element.addEventListener("change", function() {
+        const selectedFile = element.files[0]; // Get the first selected file
+    
+        if (selectedFile) {
+          console.log("Selected file path: " + selectedFile.name);
+          // You can also access selectedFile.type (file type) and selectedFile.size (file size) if needed
+        } else {
+          console.log("No file selected");
+        }
+      });
       const e2 = document.querySelector("form");
       let btnToggle = document.querySelector(".menu-bar");
       let nav_bar = document.querySelector("header .nav-bar .navigation-links");

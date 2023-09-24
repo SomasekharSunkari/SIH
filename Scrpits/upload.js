@@ -1,6 +1,6 @@
-const Moralis = require("moralis").default;
-const fs = require("fs");
 async function uploadToIpfs() {
+  const Moralis = require("moralis").default;//mORALIS IS A sTREAM Api
+  const fs = require("fs");
   await Moralis.start({
     apiKey: "QpR4EBjFJhIDiZw86ueWPd0rz4BCgbxRI9p8sYaiYZfoif6Jsm9aGrvboU7agNrX",
   });
