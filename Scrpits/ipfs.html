@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Upload</title>
+    <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
+    <script>
+      async function uploadFile() {
+        const fileInput = document.getElementById("fileToUpload");
+        const file = fileInput.files[0];
+
+        const ipfs = await Ipfs.create();
+        const added = await ipfs.add(file);
+
+        const ipfsHash = added.cid;
+
+        console.log("File uploaded to IPFS with hash:", ipfsHash);
+
+        // Display the IPFS hash to the user
+        const hashContainer = document.getElementById("hashContainer");
+        hashContainer.innerText = "IPFS Hash: " + ipfsHash;
+
+        // Publish the IPFS hash to IPNS
+        const ipns = await ipfs.name.publish(ipfsHash);
+        const ipnsHash = ipns.name.toString();
+
+        console.log("IPFS hash published to IPNS with hash:", ipnsHash);
+
+        // Convert IPNS hash to IPFS format
+        const ipfsUrl = "http://ipfs.io/ipfs/" + ipnsHash;
+
+        // Display the IPFS URL to the user
+        const ipfsUrlContainer = document.getElementById("ipfsUrlContainer");
+        ipfsUrlContainer.innerHTML =
+          'IPFS URL: <a href="' + ipfsUrl + '">' + ipfsUrl + "</a>";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>File Upload</h1>
+    <form>
+      <input type="file" name="fileToUpload" id="fileToUpload" />
+      <input type="button" value="Upload" onclick="uploadFile()" />
+    </form>
+    <div id="hashContainer"></div>
+    <div id="ipfsUrlContainer"></div>
+  </body>
+</html>
