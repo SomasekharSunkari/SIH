@@ -8,7 +8,7 @@ async function uploadToIpfs() {
   const uploadArray = [
     {
       path: "C:\Users\sunkari somasekhar\Desktop\SIH_Frontend",
-      content: fs.readFileSync("./checked.png", { encoding: "base64" }),
+      content: fs.readFileSync("./Red_Shoe.png", { encoding: "base64" }),
     },
   ];
   //3̀
