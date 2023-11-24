@@ -34,7 +34,7 @@
         <br />
       </form>
       <div class="btns">
-        <button>Upload Document</button>
+        <button class="btnon">Upload Document</button>
       </div>
     </div>
     <div class="about-us">
@@ -90,33 +90,50 @@
         <i class="fa-regular fa-envelope" style="color: red"></i>
       </div>
     </div>
-    <script
-      src="https://kit.fontawesome.com/73d1e72ba5.js"
-      crossorigin="anonymous"
-    ></script>
-    <script>
+   
+    <script type="module" src="./Scrpits/upload.mjs">
+
+      const Click_button = document.querySelector(".btnon");
       const element = document.getElementById("fileinput");
+      let file1 = element.files[0];
+      console.log("Yes dlsa;dnsssssssssss")
+
+
+
       element.addEventListener("change", function() {
-        const selectedFile = element.files[0]; // Get the first selected file
-    
+        const selectedFile = element.files[0];
+        console.log(selectedFile.name)
+        
         if (selectedFile) {
           console.log("Selected file path: " + selectedFile.name);
-          // You can also access selectedFile.type (file type) and selectedFile.size (file size) if needed
+        } else {
+          console.log("No file selected");
+        }
+
+      });
+      Click_button.addEventListener("click", () => {
+        const selectedFile = element.files[0];
+        if (selectedFile) {
+          console.log("Selected file path: " + selectedFile.name);
+          uploadToIpfs(selectedFile.name);
+          console.log("shi");
         } else {
           console.log("No file selected");
         }
       });
+      
+
       const e2 = document.querySelector("form");
       let btnToggle = document.querySelector(".menu-bar");
       let nav_bar = document.querySelector("header .nav-bar .navigation-links");
       btnToggle.onclick = () => {
         nav_bar.classList.toggle("toggl-manubar");
-      };
-      element.onchange = () => {
-        if (element) {
-          e2.removeChild(e2.firstChild);
-        }
-      };
+      };      
     </script>
+     
+    <script
+      src="https://kit.fontawesome.com/73d1e72ba5.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
